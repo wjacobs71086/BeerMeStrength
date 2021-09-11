@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 export const Search = (props) => {
     const [searchTerm, setSearchTerm] = useState("")
 
+    useEffect(() => {
+        props.handleSearch(searchTerm)
+      }, [searchTerm]);
 
 
     return (
@@ -12,7 +15,6 @@ export const Search = (props) => {
                 defaultValue=''
                 onChange={(e) => {
                     setSearchTerm(e.target.value)
-                    props.handleSearch(searchTerm)
                 }}
                 placeholder='beer'/>
         </div>

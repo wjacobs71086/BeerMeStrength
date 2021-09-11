@@ -1,8 +1,14 @@
 import React from 'react'
 import {Beer} from './Beer'
 
-export const Favorites = (props) => {
-// iterate through the props of beers and generate a beer card for any marked as true
+export const FilteredSearch = (props) => {
+
+// If the filter from props is "fav" then return favorite beers, else, 
+//search the name of the beers, or the by of the beers and return that list.
+
+const handleFilter = () => {
+  
+}
 
     return (
         <div>
