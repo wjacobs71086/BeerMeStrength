@@ -8,7 +8,7 @@ import {Search} from './components/Search';
 
 function App() {
   const [beers, setBeers] = useState(beerList)
-  const [searching, setSearching] = useState('')
+  const [searching, setSearching] = useState('fav')
 
 const handleSearch = (term) => {
     return setSearching(term)
@@ -28,7 +28,7 @@ const handleSearch = (term) => {
 
 
           <FilteredSearch
-            filter='fav'
+            filter={searching}
             beers={beers}/>
         <p>-------------------</p>
           <MyBeers
