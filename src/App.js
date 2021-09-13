@@ -1,6 +1,6 @@
 import './App.css';
 import { FilteredSearch } from './components/FilteredSearch';
-import {useState,  useEffect} from 'react';
+import {useState} from 'react';
 import beerList from './demo_beer_data.js'
 import { MyBeers } from './components/MyBeers';
 import {Search} from './components/Search';
@@ -8,7 +8,7 @@ import {Search} from './components/Search';
 
 function App() {
   const [beers, setBeers] = useState(beerList)
-  const [searching, setSearching] = useState('fav')
+  const [searching, setSearching] = useState({term: '', rating: null, price: null})
 
 const handleSearch = (term) => {
     return setSearching(term)
@@ -25,8 +25,6 @@ const handleSearch = (term) => {
           handleSearch={handleSearch}
           // onChange={searchingForBeer}
         />
-
-
           <FilteredSearch
             filter={searching}
             beers={beers}/>

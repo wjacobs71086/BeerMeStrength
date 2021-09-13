@@ -1,6 +1,8 @@
 import React from 'react'
 import {Beer} from './Beer'
 
+
+
 export const FilteredSearch = (props) => {
 
 // If the filter from props is "fav" then return favorite beers, else, 
@@ -9,9 +11,10 @@ export const FilteredSearch = (props) => {
 const handleTextFilter = (filter) => {
   // filter through the beers list and return a new list that contains the filter from either the name, or by
   
-  let filteredList = []  
-  if (filter != 'fav' && filter.length > 0) {
-    filteredList = props.beers.filter(beer => beer.name.includes(props.filter) || beer.by.includes(props.filter))
+  let filteredList = [] 
+
+  if (filter != 'fav' && filter.term.length > 0) {
+    filteredList = props.beers.filter(beer => beer.name.toLowerCase().includes(props.filter.term) || beer.by.toLowerCase().includes(props.filter.term) || beer.rating >= props.filter.rating)
         return (
             <>
                 {filteredList.map(beer => {
