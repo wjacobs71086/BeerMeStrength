@@ -7,7 +7,7 @@ import {Search} from './components/Search';
 
 
 function App() {
-  const [beers, setBeers] = useState(beerList)
+  //const [beers, setBeers] = useState(beerList)
   const [searching, setSearching] = useState({term: '', rating: null, price: null})
 
 const handleSearch = (term) => {
@@ -21,16 +21,16 @@ const handleSearch = (term) => {
       <h1>Beer Me Strength</h1>
       
         <Search 
-          beers={beers}
+          beers={beerList}
           handleSearch={handleSearch}
           // onChange={searchingForBeer}
         />
           <FilteredSearch
             filter={searching}
-            beers={beers}/>
+            beers={beerList}/>
         <p>-------------------</p>
           <MyBeers
-            beers={beers}/>
+            beers={beerList}/>
     </div>
   );
 }
