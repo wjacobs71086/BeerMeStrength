@@ -17,8 +17,6 @@ const handleTextFilter = (filter) => {
 // if the rating and the term are used, then filter by that, otherwise use the rating if the term is still set to 'fav'
 // Should there be a rating filter? Should this instead be "Sort by:" and provide highest to lowest?
 // Door dash overs "Over 3.5" as a rating system with price being basically a radio selector.
-
-
     if (filter !== 'fav' && filter.term.length > 0) {
         filteredList = props.beers.filter(beer => beer.name.toLowerCase().includes(props.filter.term) || beer.by.toLowerCase().includes(props.filter.term))
     }
@@ -44,20 +42,7 @@ const handleTextFilter = (filter) => {
             })}
         </>
     )
-
-
-
 }
-
-// const handlePriceFilter = () => {
-//     // filter through the beers list and return a new list that contains the filter from the selected price value and below
-//     // sort from rated price to lowest
-//   }
-
-//   const handleRatingFilter = () => {
-//     // filter through the beers list and return a new list that contains the filter from the selected rating value and below
-//     // sort from rated to lowest
-//   }
 
     return (
         <div>
