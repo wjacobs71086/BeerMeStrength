@@ -17,21 +17,22 @@ export const HomePage = () => {
     return (
         <div>
             <Link
-                to='/new'>
-                + New Beer
-                </Link>
+              to='/new'>
+              + New Beer
+              </Link>
 
-        <Search 
-          beers={beerList}
-          handleSearch={handleSearch}
-          // onChange={searchingForBeer}
-        />
-          <FilteredSearch
-            filter={searching}
-            beers={beerList}/>
-        <p>-------------------</p>
-          <MyBeers
-            beers={beerList}/>
+            <Search 
+              beers={beerList}
+              handleSearch={handleSearch}/>
+
+            <FilteredSearch
+              filter={searching}
+              beers={beerList}/>
+
+            <p>-------------------</p>
+
+            <MyBeers
+              beers={beerList}/>
         </div>
     )
 }

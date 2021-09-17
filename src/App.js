@@ -6,11 +6,10 @@ import './App.css';
 // import {Search} from './components/Search';
 import {HomePage} from './Routes/HomePage';
 import {NewBeer} from './Routes/NewBeer';
+import { LandingPage } from './Routes/LandingPage';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 
@@ -26,19 +25,21 @@ function App() {
 
   return (
     <div className="App">
-      {/* This will be were I want to place a nav component */}
       <h1>Beer Me Strength</h1>
-      <Route
+        <Route
           exact
           path={'/new'}
-          component={NewBeer}
-        />
-         <Route
+          component={NewBeer}/>
+
+        <Route
+          exact
+          path={'/home'}
+          component={HomePage}/>
+
+        <Route
           exact
           path={'/'}
-          component={HomePage}
-        />
-
+          component={LandingPage}/>
     </div>
   );
 }
