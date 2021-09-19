@@ -7,7 +7,7 @@ import React, {useState, useEffect} from 'react'
 
 
 export const Search = (props) => {
-    const [search, setSearch] = useState({term: '', rating: null, price: null})
+    const [search, setSearch] = useState({term: '', rating: '', price: ''})
 
     useEffect(() => {
         props.handleSearch(search)
@@ -23,7 +23,7 @@ export const Search = (props) => {
 
             <label>Rating: </label>
             <select name="rating" 
-                    value={search.rating}
+                    value={(search.rating) ? search.rating : ''}
                     onChange={(e) => {
                         setSearch({...search, rating:e.target.value})
                     }}
@@ -38,11 +38,10 @@ export const Search = (props) => {
             <label>Price: </label>
             <select 
                 name="price" 
-                value={[]}
+                value={(search.price) ? search.price : ''}
                     onChange={(e) => {
-                        console.log('welp, we will get there', e.target.value)
-                    }}
-                multiple>
+                        setSearch({...search, price: e.target.value})
+                    }}>
                 <option value="$">$</option>
                 <option value="$$">$$</option>
                 <option value="$$$">$$$</option>

@@ -7,10 +7,7 @@ import './App.css';
 import {HomePage} from './Routes/HomePage';
 import {NewBeer} from './Routes/NewBeer';
 import { LandingPage } from './Routes/LandingPage';
-import {
-  BrowserRouter as Router,
-  Route,
-} from "react-router-dom";
+import { Route } from "react-router-dom";
 
 
 function App() {

@@ -1,13 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react'
 import LoginForm from '../components/LoginForm'
 
 
+
 export const LandingPage = () => {
+    const [signUp, setSignUp] = useState(false)
+
+    const handleCancel = () => {
+        return setSignUp(false)
+    }
+
     return (
         <div>
-            <LoginForm/>
-            <Link to='/sign-up'>Sign Up</Link>
+            <LoginForm
+                signUp={signUp}
+                handleCancel={handleCancel}/>
+            {(!signUp) ?<button onClick={()=>setSignUp(true)}>Sign Up</button> : null}
         </div>
     )
 }
