@@ -5,7 +5,7 @@ import { MyBeers } from '../components/MyBeers';
 import {Search} from '../components/Search';
 import React from 'react'
 import { Link } from 'react-router-dom';
-
+import Boop from '../components/Boop';
 
 export const HomePage = () => {
     const [searching, setSearching] = useState({term: '', rating: null, price: null})
@@ -16,11 +16,12 @@ export const HomePage = () => {
 
     return (
         <div>
+          <Boop timing={200} scale={1.15}> 
             <Link
               to='/new'>
               + New Beer
               </Link>
-
+          </Boop>
             <Search 
               beers={beerList}
               handleSearch={handleSearch}/>

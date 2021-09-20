@@ -6,7 +6,7 @@ import {Beer} from './Beer'
 export const FilteredSearch = (props) => {
 
 const {filter, beers } = props;
-console.log('this is the filter', filter)
+// console.log('this is the filter', filter)
 
 const handleTextFilter = (filter) => {
   // filter through the beers list and return a new list that contains the filter from either the name, or by
@@ -36,8 +36,7 @@ const handleTextFilter = (filter) => {
                         key={beer.id}
                         name={beer.name}
                         rating={beer.rating}
-                        price={beer.price}
-                        />
+                        price={beer.price}/>
             })}
         </>
     )

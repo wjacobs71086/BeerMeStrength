@@ -28,6 +28,7 @@ export const Search = (props) => {
                         setSearch({...search, rating:e.target.value})
                     }}
                     >
+                <option value={''}></option>
                 <option value={1}>1+</option>
                 <option value={2}>2+</option>
                 <option value={3}>3+</option>
@@ -42,6 +43,7 @@ export const Search = (props) => {
                     onChange={(e) => {
                         setSearch({...search, price: e.target.value})
                     }}>
+                <option value=""></option>
                 <option value="$">$</option>
                 <option value="$$">$$</option>
                 <option value="$$$">$$$</option>
