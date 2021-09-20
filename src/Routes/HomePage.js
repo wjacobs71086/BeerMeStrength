@@ -5,10 +5,12 @@ import { MyBeers } from '../components/MyBeers';
 import {Search} from '../components/Search';
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Boop from '../components/Boop';
+import useBoop from '../hooks/useBoop';
+import {animated} from 'react-spring';
 
 export const HomePage = () => {
     const [searching, setSearching] = useState({term: '', rating: null, price: null})
+    const [style, trigger] = useBoop({  scale: 1.05, rotation: 5, x: 1, y: 1});
 
     const handleSearch = (term) => {
         return setSearching(term)
@@ -16,12 +18,11 @@ export const HomePage = () => {
 
     return (
         <div>
-          <Boop timing={200} scale={1.15}> 
             <Link
               to='/new'>
-              + New Beer
+              <animated.button style={style} onMouseEnter={trigger}>+ New Beer</animated.button>
               </Link>
-          </Boop>
+        
             <Search 
               beers={beerList}
               handleSearch={handleSearch}/>
