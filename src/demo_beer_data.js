@@ -7,7 +7,7 @@
     {id: 5, name: 'Batsquatch', by: 'Rogue', type: 'Hazy IPA', abv: 6.7, rating: 4, price: '$$', fav: false}
 ];
 
-const demoUsers = [
+export const demoUsers = [
     {id: 1, name: 'Wesley', age: 36, email: 'a@a.com', password:'pass', active:true}
 ];
 

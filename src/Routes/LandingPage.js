@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import LoginForm from '../components/LoginForm'
 
-export const LandingPage = () => {
+export const LandingPage = (props) => {
     const [signUp, setSignUp] = useState(false)
 
     const handleCancel = () => {
@@ -11,8 +11,9 @@ export const LandingPage = () => {
     return (
         <div>
                 <LoginForm
-                signUp={signUp}
-                handleCancel={handleCancel}/>
+                    props={props}
+                    signUp={signUp}
+                    handleCancel={handleCancel}/>
             
             {(!signUp) ? <button onClick={()=>setSignUp(true)}>Sign Up</button> : null}
         </div>
