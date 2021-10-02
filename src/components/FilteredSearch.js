@@ -34,6 +34,7 @@ const handleTextFilter = (filter) => {
             {filteredList.map(beer => {
                 return <Beer 
                         key={beer.id}
+                        identifier={beer.id}
                         name={beer.name}
                         rating={beer.rating}
                         price={beer.price}/>

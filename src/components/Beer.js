@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 // Renders an individual beer card for the home page.
 
 export const Beer = (props) => {
+    // console.log('props', props)
     return (
         
             <div>

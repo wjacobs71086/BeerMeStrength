@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import { demoUsers } from '../demo_beer_data';
+import clientServices from '../demo_beer_data';
 
 
 export const LoginForm = (props) => {
     const [passMatch, setPassMatch] = useState(true)
     const [validEmail, setValidEmail] = useState(true)
+    const [emailError, setEmailError] = useState(false)
+    
     // Create a function to evaluate that the password is matching both times.
     const checkPasswords = (pass1, pass2) => {
         if (pass1 != pass2) {
@@ -43,9 +45,12 @@ export const LoginForm = (props) => {
             }
         } else {
             // path for login.
-            if (demoUsers.filter(user => user.email == email.value).length == 1) {
+            console.log('demo users', clientServices.demoUsers)
+            if (clientServices.demoUsers.filter(user => user.email == email.value).length == 1) {
                 // I've gotta fix this
-                console.log('Im here?', props.props.history.push('/home'))
+                props.props.history.push('/home')
+            } else {
+                setEmailError(true)
             }
         }
     }
@@ -80,13 +85,13 @@ export const LoginForm = (props) => {
         } else {
             return (
                 <div>
+                    {(emailError) ? <h3>Unable to Login. Try again.</h3>: null}
                     <form onSubmit={handleLogin}>
                         <label>Email</label>
                             <input type='email' name='email'/>
                         <label>Password</label>
                             <input type='password' name='password'/>
                         <button>
-                            {/* <Link to='/home'>Submit</Link> */}
                             Submit
                         </button>
                     </form> 

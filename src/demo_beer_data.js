@@ -1,5 +1,5 @@
 
- const beerList = [
+ var beerList = [
     {id: 1, name: 'Beak Breaker', by: 'Pelican', type: 'IPA', abv: 9.0, rating: 4, price: '$$', fav: false},
     {id: 2, name: 'Pabst Blue Ribbon', by: 'Pabst', type: 'Pilsner', abv: 4.5, rating: 2, price: '$', fav: false},
     {id: 3, name: 'Pliney the Eldest', by: 'Pliney', type: 'IPA', abv: 7.5, rating: 5, price: '$$$$$', fav: true},
