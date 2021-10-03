@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Beer Me Strength</h1>
+      <h1 className='title'>Beer Me Strength</h1>
         <Route
           exact
           path={'/new'}

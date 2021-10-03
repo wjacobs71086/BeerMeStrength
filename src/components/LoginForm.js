@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import clientServices from '../demo_beer_data';
+import './LoginForm.css'
+import React, {useState} from 'react';
+import {demoUsers} from '../demo_beer_data';
 
 
 export const LoginForm = (props) => {
@@ -45,8 +45,7 @@ export const LoginForm = (props) => {
             }
         } else {
             // path for login.
-            console.log('demo users', clientServices.demoUsers)
-            if (clientServices.demoUsers.filter(user => user.email == email.value).length == 1) {
+            if (demoUsers.filter(user => user.email == email.value).length == 1) {
                 // I've gotta fix this
                 props.props.history.push('/home')
             } else {
@@ -58,52 +57,50 @@ export const LoginForm = (props) => {
     const handleFormRender = () => {
         if (props.signUp) {
             return (
-                <div>
+                <>
                     {(!passMatch) ? <h2>Passwords must match</h2> : null}
                     {(!validEmail) ? <h2>Please use a valid Email</h2> : null}
-                    <form onSubmit={handleLogin}>
-                        <label>Name</label>
-                            <input type='text' name='name' required/>
-                        <label>Age</label>
-                            <input type='text' name='age' required/>
-                        <label>Email</label>
-                            <input type='email' name='email' required/>
-                        <label>Password</label>
-                            <input type='password' name='password' required/>
-                        <label>Re-Enter Password</label>
-                            <input type='password' name='passConfirm' required/>
-                        <button type='submit'>
+                    <form onSubmit={handleLogin} className='form'>
+                        <label className='formLabel'>Name</label>
+                            <input className='formInputText' type='text' name='name' required/>
+                        <label className='formLabel'>Age</label>
+                            <input className='formInputText' type='text' name='age' required/>
+                        <label className='formLabel'>Email</label>
+                            <input className='formInputText' type='email' name='email' required/>
+                        <label className='formLabel'>Password</label>
+                            <input className='formInputText' type='password' name='password' required/>
+                        <label className='formLabel'>Re-Enter Password</label>
+                            <input className='formInputText' type='password' name='passConfirm' required/>
+                        <button className='formButton' type='submit'>
                             {/* <Link to='/home'>Submit</Link> */}
                             Submit</button>
-                        <button onClick={() => {
+                        <button className='formButton' onClick={() => {
                             setPassMatch(true)
                             props.handleCancel()
                         }}>Cancel</button>
                     </form> 
-                </div>
+                </>
             )
         } else {
             return (
-                <div>
+                <>
                     {(emailError) ? <h3>Unable to Login. Try again.</h3>: null}
-                    <form onSubmit={handleLogin}>
-                        <label>Email</label>
-                            <input type='email' name='email'/>
-                        <label>Password</label>
-                            <input type='password' name='password'/>
-                        <button>
-                            Submit
+                    <form onSubmit={handleLogin} className='form'>
+                            <input className='formInputText' type='email' name='email' placeholder='Email'/>
+                            <input className='formInputText' type='password' name='password' placeholder='Password'/>
+                        <button className='formButton'>
+                            Login
                         </button>
                     </form> 
-                </div>
+                </>
             )
         }
     }
 
     return (
-        <div>
+        <>
             {handleFormRender()}
-        </div>
+        </>
     )
 }
 

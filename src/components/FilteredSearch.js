@@ -21,7 +21,8 @@ const handleTextFilter = (filter) => {
    }
 
    if (filter.term === ''){
-       filteredList = filteredList.filter(beer => beer.fav)
+    // console.log('the filtered list',filteredList)
+    filteredList = filteredList.beerList.filter(beer => beer.fav)
    }
 
    if (filter.price != '' && filter.price){

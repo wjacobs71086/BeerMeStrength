@@ -9,13 +9,13 @@ export const LandingPage = (props) => {
     }
 
     return (
-        <div>
+        <div className='landing'>
                 <LoginForm
                     props={props}
                     signUp={signUp}
                     handleCancel={handleCancel}/>
             
-            {(!signUp) ? <button onClick={()=>setSignUp(true)}>Sign Up</button> : null}
+            {(!signUp) ? <button className='formButton signupButton' onClick={()=>setSignUp(true)}>Sign Up</button> : null}
         </div>
     )
 }

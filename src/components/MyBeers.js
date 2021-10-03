@@ -7,7 +7,7 @@ export const MyBeers = (props) => {
         <div>
             <h3>This is a list of all my beers</h3>
                 <ul>
-                {(props.beers) ? props.beers.map(beer => {
+                {(props.beers.beerList) ? props.beers.beerList.map(beer => {
                     return ( <Beer 
                                 identifier={beer.id}
                                 key={beer.id}
