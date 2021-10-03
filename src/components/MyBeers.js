@@ -4,7 +4,7 @@ import {Beer} from './Beer'
 export const MyBeers = (props) => {
     
     return (
-        <div>
+        <div className='myBeerListContainer'>
             <h3>This is a list of all my beers</h3>
                 <ul>
                 {(props.beers.beerList) ? props.beers.beerList.map(beer => {

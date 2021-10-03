@@ -1,19 +1,20 @@
 import React from 'react'
 import {Beer} from './Beer'
-
+import './FilteredSearch.css'
 
 
 export const FilteredSearch = (props) => {
 
 const {filter, beers } = props;
 // console.log('this is the filter', filter)
+// console.log('this is the props', props)
 
 const handleTextFilter = (filter) => {
   // filter through the beers list and return a new list that contains the filter from either the name, or by
   
-  let filteredList = props.beers
+  let filteredList = beers.beerList;
     if (filter !== 'fav' && filter.term.length > 0) {
-        filteredList = beers.filter(beer => beer.name.toLowerCase().includes(filter.term) || beer.by.toLowerCase().includes(filter.term))
+        filteredList = beers.beerList.filter(beer => beer.name.toLowerCase().includes(filter.term) || beer.by.toLowerCase().includes(filter.term))
     }
     
    if (filter.rating > 1) {
@@ -22,7 +23,7 @@ const handleTextFilter = (filter) => {
 
    if (filter.term === ''){
     // console.log('the filtered list',filteredList)
-    filteredList = filteredList.beerList.filter(beer => beer.fav)
+    filteredList = filteredList.filter(beer => beer.fav)
    }
 
    if (filter.price != '' && filter.price){
@@ -45,9 +46,9 @@ const handleTextFilter = (filter) => {
 }
 
     return (
-        <div>
+        <div className='favoritesContainer'>
             {(filter.term === '' && filter.price == '' & filter.rating == '') ? <h3>My favorite beers!</h3> : null}
-            {handleTextFilter(props.filter)}
+            {handleTextFilter(filter)}
         </div>
     )
 }

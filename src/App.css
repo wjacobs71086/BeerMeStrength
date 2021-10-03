@@ -1,16 +1,75 @@
 :root {
-  --main-color:white;
+  --highlight-pink:#DB4272;
+  --background-pink: #E69FA2;
+  --highlight-blue: #84D4E3;
+  --highlight-yellow: #F7C83E;
+  --background-green: #4D5B27;
+  --background-tan: #DCD9A1;
+  background-color: rgb(248, 248, 239);
 }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+
+
+
 
 .App {
   text-align: center;
   width: 100vw;
   height: 100vh;
+  color: var(--background-green);
 }
 .title {
-  color: var(--main-color);
+  color: var(--highlight-yellow);
 }
 .header {
-  background-color: blue;
+  background-color: var(--background-green);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: var(--background-green)
+}
+.newButton {
+  border-radius: 100%;
+}
+
+a, .newButton {
+  margin-left: 2%;
+}
+
+.myBeerListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+ul {
+  list-style: none;
 }
 

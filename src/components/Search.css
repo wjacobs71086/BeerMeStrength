@@ -1,0 +1,10 @@
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.searchItem {
+    margin: 1%;
+}

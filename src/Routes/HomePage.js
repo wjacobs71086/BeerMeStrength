@@ -1,5 +1,5 @@
 import { FilteredSearch } from '../components/FilteredSearch';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import beerList from '../demo_beer_data.js'
 import { MyBeers } from '../components/MyBeers';
 import {Search} from '../components/Search';
@@ -10,7 +10,7 @@ import {animated} from 'react-spring';
 
 export const HomePage = (props) => {
     const [searching, setSearching] = useState({term: '', rating: null, price: null})
-    const [style, trigger] = useBoop({  scale: 1.05, rotation: 5, x: 1, y: 1});
+    const [style, trigger] = useBoop({ scale: 1, rotation: 15, x: 0, y: 0 });
     const [brewsList, setBrewsList] = useState(beerList)
 
     
@@ -23,16 +23,17 @@ export const HomePage = (props) => {
     }
 
     return (
-        <div>
-            <Link
-              to='/new'>
-              <animated.button style={style} onMouseEnter={trigger}>+ New Beer</animated.button>
-              </Link>
-        
+        <div className='mainContainer'>
+          <div className='searchContainer'>
             <Search 
               beers={brewsList}
               handleSearch={handleSearch}/>
 
+            <Link
+              to='/new'>
+              <animated.button style={style} onMouseEnter={trigger} className='newButton'>+</animated.button>
+              </Link>
+          </div>
             <FilteredSearch
               filter={searching}
               beers={brewsList}/>

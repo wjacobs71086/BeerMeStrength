@@ -14,7 +14,10 @@ const handleSubmit = (ev) => {
     ev.preventDefault();
     const {name, by, type, abv, rating, price, fav} = ev.target
     // This is where I'll make a call to add this to the beers list on the Server/DB
-    beerList.push({
+
+
+
+    beerList.beerList.push({
         id: Math.random(),
         name: name.value,
         by: by.value,
