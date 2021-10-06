@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import './Search.css';
+import { Link } from 'react-router-dom';
+import useBoop from '../hooks/useBoop';
+import {animated} from 'react-spring';
 
 // This should be able to check the current state of all search aspects together and pass this into the handleSearch feature 
 // EX: props.handleSearch({term:'', rating: 4, price:'$$'})
@@ -9,7 +12,7 @@ import './Search.css';
 
 export const Search = (props) => {
     const [search, setSearch] = useState({term: '', rating: '', price: ''})
-
+    const [style, trigger] = useBoop({ scale: 1, rotation: 15, x: 0, y: 0 });
     useEffect(() => {
         props.handleSearch(search)
       }, [search]);
@@ -19,10 +22,11 @@ export const Search = (props) => {
             <input 
                 type='text' 
                 defaultValue=''
-                className='searchItem'
+                className='searchItem textSearch'
                 onChange={(e) => {setSearch({...search, term:e.target.value.toLowerCase()})}}
                 placeholder='Search'/>
 
+            <div className='subSearch'>
             <label className='searchItem'>Rating: </label>
             <select name="rating" 
                     className='searchItem'
@@ -54,6 +58,12 @@ export const Search = (props) => {
                 <option value="$$$$">$$$$</option>
                 <option value="$$$$$">$$$$$</option>
             </select>
+
+            <Link
+              to='/new'>
+              <animated.button style={style} onMouseEnter={trigger} className='newButton'>+</animated.button>
+              </Link>
+              </div>
         </>
     )
 }

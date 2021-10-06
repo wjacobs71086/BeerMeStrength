@@ -1,22 +1,11 @@
 
 
 Client
-
-    MVP
-        - Add login page
-        - Add sign-up page
-        - Create public and private routes
-        - Route pages to link
-        - Add functionality
-        - ** Resolve price filter
-        - Add beer info page
-        - Add delete beer function
-
-    Style
-        - Create selector structure for CSS
-        - Determine color and style guide
-        - Pick font
-        - Pick Color Scheme
+- Format the new beer page & add a back function.
+- Setup the Edit abilities.
+- Pick a font
+- Set break points
+   
 
 
 Server

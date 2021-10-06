@@ -5,7 +5,7 @@
   --highlight-yellow: #F7C83E;
   --background-green: #4D5B27;
   --background-tan: #DCD9A1;
-  background-color: rgb(248, 248, 239);
+  background-color: white;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -28,22 +28,35 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-
-
-
+body {
+  overflow: overlay;
+}
 
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
   width: 100vw;
   height: 100vh;
   color: var(--background-green);
 }
 .title {
   color: var(--highlight-yellow);
+  padding-left: 3%;
 }
 .header {
   background-color: var(--background-green);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 5%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
+
+
+
 
 .mainContainer {
   display: flex;
@@ -71,5 +84,10 @@ a, .newButton {
 }
 ul {
   list-style: none;
+}
+
+.bottom {
+  margin-bottom: 5%;
+  cursor: pointer;
 }
 

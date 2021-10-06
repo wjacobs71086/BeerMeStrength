@@ -46,7 +46,7 @@ const handleTextFilter = (filter) => {
 }
 
     return (
-        <div className='favoritesContainer'>
+        <div className='beerListContainer'>
             {(filter.term === '' && filter.price == '' & filter.rating == '') ? <h3>My favorite beers!</h3> : null}
             {handleTextFilter(filter)}
         </div>

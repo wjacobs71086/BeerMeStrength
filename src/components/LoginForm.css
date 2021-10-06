@@ -16,7 +16,10 @@
 
 .formInputText {
     margin: 0.4%;
-    border: 2px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid lightgray;
     border-radius: .15em;
     width: 95%;
 }

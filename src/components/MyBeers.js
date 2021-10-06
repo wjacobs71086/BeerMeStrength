@@ -4,9 +4,7 @@ import {Beer} from './Beer'
 export const MyBeers = (props) => {
     
     return (
-        <div className='myBeerListContainer'>
-            <h3>This is a list of all my beers</h3>
-                <ul>
+        <div className='beerListContainer'>
                 {(props.beers.beerList) ? props.beers.beerList.map(beer => {
                     return ( <Beer 
                                 identifier={beer.id}
@@ -15,7 +13,6 @@ export const MyBeers = (props) => {
                                 rating={beer.rating}
                                 price={beer.price}/> 
                 )}) : null}
-                </ul>
         </div>
     )
 }
