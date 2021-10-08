@@ -2,7 +2,7 @@ import './App.css';
 import {HomePage} from './Routes/HomePage';
 import {NewBeer} from './Routes/NewBeer';
 import { LandingPage } from './Routes/LandingPage';
-import { Route } from "react-router-dom";
+import { Route} from "react-router-dom";
 import {BeerPage} from './Routes/Beerpage';
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
   return (
     <div className="App">
       <header className='header'>
-       <h1 className='title'>Beer Me Strength</h1>
+        
+        <h1 className={'title'}>Beer Me Strength</h1>
+        
       </header>
       
         <Route

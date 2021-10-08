@@ -17,9 +17,6 @@ const handleDelete = (id) => {
     }
 }
 
-
-console.log('selected Beer', selectedBeer)
-
     return (
         <div>
             <h1>{selectedBeer[0].name}</h1> 

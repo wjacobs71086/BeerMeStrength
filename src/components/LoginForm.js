@@ -30,24 +30,40 @@ export const LoginForm = (props) => {
        
     }
 
+const handleSignUp = (ev) => {
+    ev.preventDefault()
+        const {name, email, age, password, passConfirm} = ev.target
+    // {id: 1, name: 'Wesley', age: 36, email: 'a@a.com', password:'pass', active:true}
+   let newUser = {'id': Math.ceil(Math.random() * 200), 'name':name.value, 'email':email.value, 'age':age.value, 'password':password.value, beers: [
+    {id: 1, name: 'Beak Breaker', by: 'Pelican', type: 'IPA', abv: 9.0, rating: 4, price: '$$', fav: false},
+    {id: 2, name: 'Pabst Blue Ribbon', by: 'Pabst', type: 'Pilsner', abv: 4.5, rating: 2, price: '$', fav: true},
+    {id: 3, name: 'Pliney the Eldest', by: 'Pliney', type: 'IPA', abv: 7.5, rating: 5, price: '$$$$$', fav: true}
+]}
+    //console.log('userImportedData', {'name':name.value, 'email':email.value, 'age':age.value, 'password':password.value, 'passConfirm':passConfirm.value})
+    demoUsers.push(newUser)
+   // props.location.state(newUser.id)
+    props.props.history.push('/home', newUser.id)
+}
+
+
+
     const handleLogin = (ev) => {
         ev.preventDefault()
         const {name, email, age, password, passConfirm} = ev.target
-        // console.log('what is coming through', {name: name.value, email: email.value, age: age.value, password: password.value, passConfirm: passConfirm.value})
-        
         
         // this is the path for the sign-up
         if (props.signUp) {
             if (checkEmail(email.value) && checkPasswords(password.value, passConfirm.value)) {
                 // This evaluates that the password is the same and the entered email is valid.
-                // This will then make a post call to the API
-                
+                // This will then make a post call to the API  
             }
         } else {
             // path for login.
             if (demoUsers.filter(user => user.email == email.value).length == 1) {
                 // I've gotta fix this
-                props.props.history.push('/home')
+                let foundUserID = demoUsers.filter(user => user.email == email.value)[0].id
+                
+                props.props.history.push('/home', foundUserID)
             } else {
                 setEmailError(true)
             }
@@ -60,7 +76,7 @@ export const LoginForm = (props) => {
                 <>
                     {(!passMatch) ? <h2>Passwords must match</h2> : null}
                     {(!validEmail) ? <h2>Please use a valid Email</h2> : null}
-                    <form onSubmit={handleLogin} className='form'>
+                    <form onSubmit={handleSignUp} className='form'>
                         <label className='formLabel'>Name</label>
                             <input className='formInputText' type='text' name='name' required/>
                         <label className='formLabel'>Age</label>

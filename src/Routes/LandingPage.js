@@ -14,8 +14,8 @@ export const LandingPage = (props) => {
                     props={props}
                     signUp={signUp}
                     handleCancel={handleCancel}/>
-            
-            {(!signUp) ? <button className='formButton signupButton' onClick={()=>setSignUp(true)}>Sign Up</button> : null}
+            <p>To test, use email a@a.com, with password "pass"</p>
+            {/* {(!signUp) ? <button className='formButton signupButton' onClick={()=>setSignUp(true)}>Sign Up</button> : null} */}
         </div>
     )
 }
