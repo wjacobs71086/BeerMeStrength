@@ -6,7 +6,6 @@ import {animated} from 'react-spring';
 // Renders an individual beer card for the home page.
 
 export const Beer = (props) => {
-    // console.log('props', props)
     const [style, trigger] = useBoop({ scale: 1.02 });
     return (
             <animated.div className='beerItemContainer' style={style} onMouseEnter={trigger}>

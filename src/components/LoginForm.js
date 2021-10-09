@@ -39,9 +39,7 @@ const handleSignUp = (ev) => {
     {id: 2, name: 'Pabst Blue Ribbon', by: 'Pabst', type: 'Pilsner', abv: 4.5, rating: 2, price: '$', fav: true},
     {id: 3, name: 'Pliney the Eldest', by: 'Pliney', type: 'IPA', abv: 7.5, rating: 5, price: '$$$$$', fav: true}
 ]}
-    //console.log('userImportedData', {'name':name.value, 'email':email.value, 'age':age.value, 'password':password.value, 'passConfirm':passConfirm.value})
     demoUsers.push(newUser)
-   // props.location.state(newUser.id)
     props.props.history.push('/home', newUser.id)
 }
 

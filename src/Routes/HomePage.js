@@ -16,13 +16,6 @@ export const HomePage = (props) => {
         return setSearching(term)
     }
 
-   
-    // let newList = demoUsers.filter(user => user.id == loggedInUser)
-
-// if (newList.length === 1) {
-//   console.log('new list of the user', newList[0].beers)
-// }
-
     return (
         <div className='mainContainer'>
           

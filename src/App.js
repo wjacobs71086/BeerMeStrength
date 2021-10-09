@@ -1,7 +1,7 @@
 import './App.css';
 import {HomePage} from './Routes/HomePage';
 import {NewBeer} from './Routes/NewBeer';
-// import { LandingPage } from './Routes/LandingPage';
+import beerIcon from './beerIcon.png';
 import { Route} from "react-router-dom";
 import {BeerPage} from './Routes/Beerpage';
 
@@ -13,11 +13,9 @@ function App() {
       {/* <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
       rel="stylesheet"/>  */}
-      <style>
-      @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-      </style>
-      <header className='header'>
       
+      <header className='header'>
+        <img src={beerIcon} alt="beerIcon" className='beerIcon' />
         <h1 className={'title'}>Beer Me Strength</h1>
         
       </header>

@@ -50,7 +50,7 @@ body {
   font-family: 'Anton', sans-serif;
   color: var(--highlight-yellow);
   font-size: 2rem;
-  padding-left: 3%;
+  padding-left: 1%;
   letter-spacing: 1.75px;
 }
 .header {
@@ -110,5 +110,12 @@ ul {
 .bottom {
   margin-bottom: 5%;
   cursor: pointer;
+}
+
+.beerIcon {
+  width: 30px;
+  height: 30px;
+  margin-left: 5%;
+  margin-right: 0;
 }
 
