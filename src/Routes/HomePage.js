@@ -25,15 +25,15 @@ export const HomePage = (props) => {
 
     return (
         <div className='mainContainer'>
-          <div className='searchContainer'>
+          
             <Search 
               beers={brewsList}
               handleSearch={handleSearch}/>
-          </div>
+          
             <FilteredSearch
               filter={searching}
               beers={brewsList}/>
-            <p>-------------------</p>
+            
             <div>
             <p className='bottom' onClick={() => setShowFullList(!showFullList)}>{(!showFullList) ? 'All Beers' : 'Hide Beers'}</p>
             {(showFullList) ? <MyBeers beers={brewsList}/> : null}

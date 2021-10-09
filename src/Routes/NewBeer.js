@@ -18,7 +18,7 @@ const handleSubmit = (ev) => {
     const {name, by, type, abv, rating, price, fav} = ev.target
     // This is where I'll make a call to add this to the beers list on the Server/DB
     beerList.beerList.push({
-        id: Math.random(),
+        id: Math.floor(Math.random()*200),
         name: name.value,
         by: by.value,
         type: type.value,
@@ -27,10 +27,7 @@ const handleSubmit = (ev) => {
         price: price.value,
         fav: fav.checked
     })
-
     props.history.goBack();
-    
-
 }
 
     return (

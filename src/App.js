@@ -10,8 +10,14 @@ function App() {
 
   return (
     <div className="App">
+      {/* <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet"/>  */}
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+      </style>
       <header className='header'>
-        
+      
         <h1 className={'title'}>Beer Me Strength</h1>
         
       </header>

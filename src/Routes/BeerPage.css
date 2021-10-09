@@ -1,0 +1,21 @@
+.beerPageContainer {
+    color: var(--background-green);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    font-size: 1.15rem;
+    width: 100%;
+    height: 75%;
+}
+
+.beerButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.beerTextTitle {
+    font-size: 2rem;
+}

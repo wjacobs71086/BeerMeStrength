@@ -1,3 +1,6 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+
 :root {
   --highlight-pink:#DB4272;
   --background-pink: #E69FA2;
@@ -44,15 +47,18 @@ body {
   color: var(--background-green);
 }
 .title {
+  font-family: 'Anton', sans-serif;
   color: var(--highlight-yellow);
+  font-size: 2rem;
   padding-left: 3%;
+  letter-spacing: 1.75px;
 }
 .header {
   background-color: var(--background-green);
   display: flex;
   align-items: center;
   justify-content: left;
-  height: 5%;
+  height: 7.5vh;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -73,7 +79,19 @@ a {
 }
 .newButton {
   border-radius: 100%;
+  background-color: transparent;
+  border-style: solid;
+  font-weight: bolder;
+  
 }
+
+.newButton:hover {
+  color: var(--highlight-pink);
+  border-color: var(--highlight-pink);
+}
+
+
+
 
 a, .newButton {
   margin-left: 2%;

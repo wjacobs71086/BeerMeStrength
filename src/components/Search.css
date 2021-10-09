@@ -4,12 +4,11 @@
     justify-content: center;
     align-items: center;
     margin: 2%;
-    width: auto;
-    padding: 5%;
-    
+    width: 300px;
 }
 .subSearch {
     display: flex;
+    justify-content: space-evenly;
     
 }
 .searchItem {
@@ -19,4 +18,5 @@
 .textSearch {
     width: 100%;
     font-size: 1.05rem;
+    font-family: FontAwesome;
 }

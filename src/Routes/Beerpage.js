@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import beerList from '../demo_beer_data';
-
+import './BeerPage.css'
 
 export const BeerPage = (props) => {
 const [editing, setEdit] = useState(false)
@@ -30,21 +30,24 @@ const handleDelete = (id) => {
 const handleRender = () => {
     if (!editing) {
         return (
-            <>
-                <h1>{beer.name}</h1> 
-                    <h3>Notes:</h3>
-                    <p>By: {beer.by}</p>
+            <div className='beerPageContainer'>
+                <h1 className='beerTextTitle'>{beer.name}</h1> 
+                    <p>Brewery: {beer.by}</p>
                     <p>Type: {beer.type}</p>
                     <p>ABV: {beer.abv}</p>
                     <p>Price: {beer.price}</p>
                     <p>Rating: {beer.rating}</p>
-                <button onClick={() => props.history.push('/')}>Back</button>
+            <div className='beerButtonContainer'>
+            <button onClick={() => props.history.push('/')}>Back</button>
                 <button onClick={() => {
                     handleDelete(beer.id)
                     props.history.push('/')
                     }}>Delete</button>
                 <button onClick={() => setEdit(true)}>Edit</button>
-            </>
+            </div>
+
+                
+            </div>
         )
     } else {
         return (
@@ -102,8 +105,11 @@ const handleRender = () => {
                 }}/>
                 </div>
                 <div>
-                    <button><Link to='/'>Back</Link></button>
-                    <button type='submit'>Submit</button>
+                    <button onClick={() => {
+                        setBeer(selectedBeer)
+                        setEdit(false)
+                        }}>Back</button>
+                    <button type='submit'>Save</button>
                 </div>
             </form> 
             </>
@@ -116,8 +122,8 @@ const handleRender = () => {
 
 
     return (
-        <div>
+        <>
             {handleRender()}
-        </div>
+        </>
     )
 }
