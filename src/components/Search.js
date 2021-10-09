@@ -53,7 +53,7 @@ export const Search = (props) => {
                     <option value="$$$$">$$$$</option>
                     <option value="$$$$$">$$$$$</option>
                 </select>
-                <Link to='/new'>
+                <Link to='/BeerMeStrength/new'>
                     <animated.button style={style} onMouseEnter={trigger} className='newButton'>+</animated.button>
                 </Link>
              </div>

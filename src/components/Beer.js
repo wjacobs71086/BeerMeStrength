@@ -9,7 +9,7 @@ export const Beer = (props) => {
     const [style, trigger] = useBoop({ scale: 1.02 });
     return (
             <animated.div className='beerItemContainer' style={style} onMouseEnter={trigger}>
-                <Link to={`/beer/${props.identifier}`} className='beerItemText name'><h5>{props.name}</h5></Link>
+                <Link to={`/BeerMeStrength/beer/${props.identifier}`} className='beerItemText name'><h5>{props.name}</h5></Link>
                 {(props.by) ? <p>By: {props.by}</p> : null}
                 <p className='beerItemText'>{props.rating}/5 - <span className='priceHighlight'>{props.price}</span></p>
                 

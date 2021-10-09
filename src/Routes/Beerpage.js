@@ -16,7 +16,7 @@ const selectedBeerIndex = beerList.beerList.indexOf(selectedBeer)
 const handleSubmit = (ev) => {
     ev.preventDefault()
     beerList.beerList[selectedBeerIndex] = beer
-    props.history.push('/')
+    props.history.push('/BeerMeStrength')
 }
 
 const handleDelete = (id) => {
@@ -38,10 +38,10 @@ const handleRender = () => {
                     <p>Price: {beer.price}</p>
                     <p>Rating: {beer.rating}</p>
             <div className='beerButtonContainer'>
-            <button onClick={() => props.history.push('/')}>Back</button>
+            <button onClick={() => props.history.push('/BeerMeStrength')}>Back</button>
                 <button onClick={() => {
                     handleDelete(beer.id)
-                    props.history.push('/')
+                    props.history.push('/BeerMeStrength')
                     }}>Delete</button>
                 <button onClick={() => setEdit(true)}>Edit</button>
             </div>

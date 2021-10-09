@@ -71,7 +71,7 @@ const handleSubmit = (ev) => {
                     <input type='checkbox' name='fav' value={true}/>
                 </div>
                 <div>
-                    <button><Link to='/'>Back</Link></button>
+                    <button><Link to='/BeerMeStrength'>Back</Link></button>
                     <button type='submit'>Submit</button>
                 </div>
             </form>

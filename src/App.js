@@ -22,7 +22,7 @@ function App() {
       
         <Route
           exact
-          path={'/new'}
+          path={'/BeerMeStrength/new'}
           component={NewBeer}/>
 
         {/* <Route
@@ -31,12 +31,12 @@ function App() {
           component={HomePage}/> */}
 
         <Route
-          path={'/beer/:id'}
+          path={'/BeerMeStrength/beer/:id'}
           component={BeerPage}/>
 
         <Route
           exact
-          path={'/'}
+          path={'/BeerMeStrength'}
           component={HomePage}/>
     </div>
   );
