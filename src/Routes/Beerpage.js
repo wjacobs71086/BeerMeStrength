@@ -26,10 +26,10 @@ const handleDelete = (id) => {
                 <p>ABV: {selectedBeer[0].abv}</p>
                 <p>Price: {selectedBeer[0].price}</p>
                 <p>Rating: {selectedBeer[0].rating}</p>
-            <button onClick={() => props.history.push('/home')}>Back</button>
+            <button onClick={() => props.history.push('/')}>Back</button>
             <button onClick={() => {
                 handleDelete(selectedBeer[0].id)
-                props.history.push('/home')
+                props.history.push('/')
                 }}>Delete</button>
             <button onClick={() => console.log('Edit')}>Edit</button>
         </div>

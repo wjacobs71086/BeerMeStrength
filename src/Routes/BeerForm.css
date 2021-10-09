@@ -1,0 +1,17 @@
+.beerFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+    width: 50vw;
+}
+
+.formInputText, .formInputSelect {
+    margin: 0.4%;
+    border-left: 2px solid lightgray;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: .15em;
+    width: 95%;
+}

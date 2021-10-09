@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import beerList from '../demo_beer_data';
+import './BeerForm.css';
 
 
 export const NewBeer = (props) => {
-    
+    const [price, setPrice] = useState('')
+    const [rating, setRating] = useState('')
 
 // This page needs to collect the information from this form, then add the data to the demobeer dataset.
 // In a real world case, this will need to actually call an API service function to make a post call to the DB and post this new beer data
@@ -44,25 +46,53 @@ const handleSubmit = (ev) => {
 }
 
     return (
-        <div>
-            <Link to='/'>Back</Link>
-            <form onSubmit={handleSubmit}>
-                <label>Name: </label>
-                <input type='text' name='name'/>
-                <label>By: </label>
-                <input type='text' name='by'/>
-                <label>Type: </label>
-                <input type='text' name='type'/>
-                <label>ABV: </label>
-                <input type='text' name='abv'/>
-                <label>Rating: </label>
-                <input type='text' name='rating'/>
-                <label>Price: </label>
-                <input type='text' name='price'/>
+        <div className='newBeerPage'>
+            
+            <form className='beerFormContainer' onSubmit={handleSubmit}>
+               
+                <input className='formInputText' placeholder='Name' type='text' name='name'/>
+                <input className='formInputText' placeholder='Brewery' type='text' name='by'/>
+                <input className='formInputText' placeholder='Type'  type='text' name='type'/>
+                <input className='formInputText' placeholder='ABV'  type='text' name='abv'/>
+
+                <select 
+                    name="rating" 
+                    className='formInputSelect'
+                    value={(rating) ? rating : ''}
+                    onChange={(e) => {
+                        setRating(`${e.target.value}`)
+                        }}>
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <select 
+                    name="price" 
+                    className='formInputSelect'
+                    value={(price) ? price : ''}
+                    onChange={(e) => {
+                        setPrice(`${e.target.value}`)
+                        }}>
+                    <option value=""></option>
+                    <option value="$">$</option>
+                    <option value="$$">$$</option>
+                    <option value="$$$">$$$</option>
+                    <option value="$$$$">$$$$</option>
+                    <option value="$$$$$">$$$$$</option>
+                </select>
                 
-                <label>Favorite?</label>
-                <input type='radio' name='fav' value={true}/>
-                <button type='submit'>Submit</button>
+                <div>
+                    <label>Favorite?</label>
+                    <input type='checkbox' name='fav' value={true}/>
+                </div>
+                <div>
+                    <button><Link to='/'>Back</Link></button>
+                    <button type='submit'>Submit</button>
+                </div>
             </form>
         </div>
     )

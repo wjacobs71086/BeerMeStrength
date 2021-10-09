@@ -1,7 +1,7 @@
 import './App.css';
 import {HomePage} from './Routes/HomePage';
 import {NewBeer} from './Routes/NewBeer';
-import { LandingPage } from './Routes/LandingPage';
+// import { LandingPage } from './Routes/LandingPage';
 import { Route} from "react-router-dom";
 import {BeerPage} from './Routes/Beerpage';
 
@@ -21,10 +21,10 @@ function App() {
           path={'/new'}
           component={NewBeer}/>
 
-        <Route
+        {/* <Route
           exact
           path={'/home'}
-          component={HomePage}/>
+          component={HomePage}/> */}
 
         <Route
           path={'/beer/:id'}
@@ -33,7 +33,7 @@ function App() {
         <Route
           exact
           path={'/'}
-          component={LandingPage}/>
+          component={HomePage}/>
     </div>
   );
 }
