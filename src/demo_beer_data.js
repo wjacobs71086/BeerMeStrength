@@ -1,10 +1,10 @@
 
  let beerList = [
-    {id: 1, name: 'Beak Breaker', by: 'Pelican', type: 'IPA', abv: 9.0, rating: 4, price: '$$', fav: true}
-    // {id: 2, name: 'Pabst Blue Ribbon', by: 'Pabst', type: 'Pilsner', abv: 4.5, rating: 2, price: '$', fav: true},
-    // {id: 3, name: 'Pliney the Eldest', by: 'Pliney', type: 'IPA', abv: 7.5, rating: 5, price: '$$$$$', fav: true},
-    // {id: 4, name: 'Shiner Bock', by: 'Shiner', type: 'Bock', abv: 5.5, rating: 4, price: '$$', fav: true},
-    // {id: 5, name: 'Batsquatch', by: 'Rogue', type: 'Hazy IPA', abv: 6.7, rating: 4, price: '$$', fav: true}
+    {id: 1, name: 'Beak Breaker', by: 'Pelican', type: 'IPA', abv: 9.0, rating: 4, price: '$$', fav: true},
+    {id: 2, name: 'Pabst Blue Ribbon', by: 'Pabst', type: 'Pilsner', abv: 4.5, rating: 2, price: '$', fav: true},
+    {id: 3, name: 'Pliney the Eldest', by: 'Pliney', type: 'IPA', abv: 7.5, rating: 5, price: '$$$$$', fav: true},
+    {id: 4, name: 'Shiner Bock', by: 'Shiner', type: 'Bock', abv: 5.5, rating: 4, price: '$$', fav: true},
+    {id: 5, name: 'Batsquatch', by: 'Rogue', type: 'Hazy IPA', abv: 6.7, rating: 4, price: '$$', fav: true}
 ];
 
 // export const demoUsers = [

@@ -5,6 +5,7 @@ import './BeerForm.css';
 
 
 export const NewBeer = (props) => {
+    console.log('newBeer page props', props)
     const [price, setPrice] = useState('')
     const [rating, setRating] = useState('')
 
@@ -16,9 +17,6 @@ const handleSubmit = (ev) => {
     ev.preventDefault();
     const {name, by, type, abv, rating, price, fav} = ev.target
     // This is where I'll make a call to add this to the beers list on the Server/DB
-
-
-
     beerList.beerList.push({
         id: Math.random(),
         name: name.value,
@@ -33,16 +31,6 @@ const handleSubmit = (ev) => {
     props.history.goBack();
     
 
-
-    // console.log('this be the object to pass up', {
-    //     name: name.value,
-    //     by: by.value,
-    //     type: type.value,
-    //     abv: abv.value,
-    //     rating: rating.value,
-    //     price: price.value,
-    //     fav: fav.checked
-    // })
 }
 
     return (
