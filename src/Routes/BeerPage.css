@@ -14,8 +14,43 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 3%;
 }
 
-.beerTextTitle {
-    font-size: 2rem;
+.beerPageTextTitle {
+    font-size: 3rem;
+    margin-bottom: 2%;
+    letter-spacing: 1.75px;
+    font-family: anton;
+}
+.beerText {
+    font-size: 1.5rem;
+}
+.beerPageButton {
+    margin: 3%;
+    background-color: transparent;
+    border: 3px solid var(--background-green);
+    border-radius: 25%;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--background-green);
+    padding: 20px;
+}
+
+.beerPageButton:hover {
+    background-color: var(--background-tan);
+    color: white;
+}
+
+.favBox {
+    -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+}
+
+.favLabel {
+    padding-right: 20px;
+
 }

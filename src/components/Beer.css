@@ -10,12 +10,17 @@
 
 .beerItemContainer:hover {
     background-color: var(--background-tan);
+    cursor: pointer;
 }
 
 .name {
     font-size: larger;
     margin: 0;
 }
+.ratingHighlight {
+    color: #ff8500;
+}
+
 
 
 

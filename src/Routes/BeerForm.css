@@ -4,6 +4,7 @@
     justify-content: space-evenly;
     height: 50vh;
     width: 50vw;
+    margin-top:5%;
 }
 
 .formInputText, .formInputSelect {

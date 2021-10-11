@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 import beerList from '../demo_beer_data';
 import './BeerPage.css'
+
 
 export const BeerPage = (props) => {
 const [editing, setEdit] = useState(false)
 const [price, setPrice] = useState('')
 const [rating, setRating] = useState('')
 const [beer, setBeer] = useState(beerList.beerList.filter(beer => beer.id == props.match.params.id)[0])
+
+
 
 let selectedBeer = beerList.beerList.filter(beer => beer.id == props.match.params.id)[0]
 const selectedBeerIndex = beerList.beerList.indexOf(selectedBeer)
@@ -27,26 +29,36 @@ const handleDelete = (id) => {
     }
 }
 
+const handleAlert = (ev) => {
+    alert('Are you sure? Was it that bad?')
+}
+
+
 const handleRender = () => {
     if (!editing) {
         return (
             <div className='beerPageContainer'>
-                <h1 className='beerTextTitle'>{beer.name}</h1> 
-                    <p>Brewery: {beer.by}</p>
-                    <p>Type: {beer.type}</p>
-                    <p>ABV: {beer.abv}</p>
-                    <p>Price: {beer.price}</p>
-                    <p>Rating: {beer.rating}</p>
-            <div className='beerButtonContainer'>
-            <button onClick={() => props.history.push('/BeerMeStrength')}>Back</button>
-                <button onClick={() => {
-                    handleDelete(beer.id)
-                    props.history.push('/BeerMeStrength')
-                    }}>Delete</button>
-                <button onClick={() => setEdit(true)}>Edit</button>
-            </div>
+                    <h1 className='beerPageTextTitle'>{beer.name}</h1> 
+                        <p className='beerText'>Brewery: {beer.by}</p>
+                        <p className='beerText'>Type: {beer.type}</p>
+                        <p className='beerText'>ABV: {beer.abv}</p>
+                        <p className='beerText'>Price: {beer.price}</p>
+                        <p className='beerText'>Rating: {beer.rating}</p>
+                <div className='beerButtonContainer'>
+                    <button 
+                        className='beerPageButton' 
+                        onClick={() => props.history.push('/BeerMeStrength')}>Back</button>
 
-                
+                    <button 
+                        className='beerPageButton' 
+                        onClick={() => {
+                            handleDelete(beer.id)
+                            props.history.push('/BeerMeStrength')
+                            }}>Delete</button>
+                        <button 
+                            className='beerPageButton' 
+                            onClick={() => setEdit(true)}>Edit</button>
+                </div>
             </div>
         )
     } else {
@@ -99,17 +111,17 @@ const handleRender = () => {
                 </select>
                 
                 <div>
-                    <label>Favorite?</label>
-                    <input type='radio' name='fav' value={beer.fav} checked={(beer.fav) ? true : false} onClick={(e) => {
+                    <label className='favLabel' >Favorite?</label>
+                    <input className='favBox' type='radio' name='fav' value={beer.fav} checked={(beer.fav) ? true : false} onClick={(e) => {
                         setBeer({...beer, fav:!e.target.value})
                 }}/>
                 </div>
                 <div>
-                    <button onClick={() => {
+                    <button className='beerPageButton' onClick={() => {
                         setBeer(selectedBeer)
                         setEdit(false)
                         }}>Back</button>
-                    <button type='submit'>Save</button>
+                    <button className='beerPageButton' type='submit'>Save</button>
                 </div>
             </form> 
             </>
