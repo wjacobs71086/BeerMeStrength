@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/BeerMeStrength/static/css/main.9d6b6723.chunk.css",
-    "main.js": "/BeerMeStrength/static/js/main.e87db70e.chunk.js",
-    "main.js.map": "/BeerMeStrength/static/js/main.e87db70e.chunk.js.map",
+    "main.css": "/BeerMeStrength/static/css/main.1aa09850.chunk.css",
+    "main.js": "/BeerMeStrength/static/js/main.b7130b69.chunk.js",
+    "main.js.map": "/BeerMeStrength/static/js/main.b7130b69.chunk.js.map",
     "runtime-main.js": "/BeerMeStrength/static/js/runtime-main.d3624948.js",
     "runtime-main.js.map": "/BeerMeStrength/static/js/runtime-main.d3624948.js.map",
     "static/js/2.54989293.chunk.js": "/BeerMeStrength/static/js/2.54989293.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.45d3e1a6.chunk.js": "/BeerMeStrength/static/js/3.45d3e1a6.chunk.js",
     "static/js/3.45d3e1a6.chunk.js.map": "/BeerMeStrength/static/js/3.45d3e1a6.chunk.js.map",
     "index.html": "/BeerMeStrength/index.html",
-    "static/css/main.9d6b6723.chunk.css.map": "/BeerMeStrength/static/css/main.9d6b6723.chunk.css.map",
+    "static/css/main.1aa09850.chunk.css.map": "/BeerMeStrength/static/css/main.1aa09850.chunk.css.map",
     "static/js/2.54989293.chunk.js.LICENSE.txt": "/BeerMeStrength/static/js/2.54989293.chunk.js.LICENSE.txt",
     "static/media/beerIcon.a8c05e4c.png": "/BeerMeStrength/static/media/beerIcon.a8c05e4c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d3624948.js",
     "static/js/2.54989293.chunk.js",
-    "static/css/main.9d6b6723.chunk.css",
-    "static/js/main.e87db70e.chunk.js"
+    "static/css/main.1aa09850.chunk.css",
+    "static/js/main.b7130b69.chunk.js"
   ]
 }
