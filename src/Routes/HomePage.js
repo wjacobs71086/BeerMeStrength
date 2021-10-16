@@ -23,13 +23,14 @@ export const HomePage = (props) => {
               beers={brewsList}
               handleSearch={handleSearch}/>
           
-            <FilteredSearch
-              filter={searching}
-              beers={brewsList}/>
+            
             
             <div>
-            <p className='bottom' onClick={() => setShowFullList(!showFullList)}>{(!showFullList) ? 'All Beers' : 'Hide Beers'}</p>
-            {(showFullList) ? <MyBeers beers={brewsList}/> : null}
+            {(showFullList) ? <MyBeers beers={brewsList}/> : <FilteredSearch
+              filter={searching}
+              beers={brewsList}/>}
+            <p className='bottom' onClick={() => setShowFullList(!showFullList)}>{(!showFullList) ? 'All Beers' : 'Favorites'}</p>
+
             </div>
         </div>
     )

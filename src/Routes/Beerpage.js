@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import beerList from '../demo_beer_data';
 import './BeerPage.css'
 
@@ -7,12 +7,21 @@ export const BeerPage = (props) => {
 const [editing, setEdit] = useState(false)
 const [price, setPrice] = useState('')
 const [rating, setRating] = useState('')
+const [image, setImage] = useState('')
 const [beer, setBeer] = useState(beerList.beerList.filter(beer => beer.id == props.match.params.id)[0])
 
 
 
 let selectedBeer = beerList.beerList.filter(beer => beer.id == props.match.params.id)[0]
 const selectedBeerIndex = beerList.beerList.indexOf(selectedBeer)
+
+
+
+
+
+
+
+
 
 
 const handleSubmit = (ev) => {
@@ -32,6 +41,22 @@ const handleDelete = (id) => {
 const handleAlert = (ev) => {
     alert('Are you sure? Was it that bad?')
 }
+
+// const makeFetchCall = () => {
+//     let image;
+//     fetch('https://dog.ceo/api/breeds/image/random')
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data)
+//         setImage(data.message)
+//     })
+//     .catch(err => console.log(err))
+// }
+
+// useEffect(() => {
+//     makeFetchCall()
+// }, [])
+
 
 
 const handleRender = () => {
@@ -136,6 +161,7 @@ const handleRender = () => {
     return (
         <>
             {handleRender()}
+            {/* { (image) ? <img src={`${image}`} alt="this is not working" width="150" height="70"/> : null} */}
         </>
     )
 }
