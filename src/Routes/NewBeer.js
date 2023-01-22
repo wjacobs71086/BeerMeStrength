@@ -40,10 +40,11 @@ const handleSubmit = (ev) => {
                     name="rating" 
                     className='formInputSelect'
                     value={(rating) ? rating : ''}
+                    placeholder="Rating"
                     onChange={(e) => {
                         setRating(`${e.target.value}`)
                         }}>
-                    <option value=""></option>
+                    <option value="" disabled selected>Rating</option>
                     <option value="1">1</option>
                     <option value="1">2</option>
                     <option value="3">3</option>
@@ -55,15 +56,13 @@ const handleSubmit = (ev) => {
                     name="price" 
                     className='formInputSelect'
                     value={(price) ? price : ''}
-                    onChange={(e) => {
-                        setPrice(`${e.target.value}`)
-                        }}>
-                    <option value=""></option>
-                    <option value="$">$</option>
-                    <option value="$$">$$</option>
-                    <option value="$$$">$$$</option>
-                    <option value="$$$$">$$$$</option>
-                    <option value="$$$$$">$$$$$</option>
+                    onChange={(e) => {setPrice(`${e.target.value}`)}}>
+                        <option value="" disabled selected>Choose</option>
+                        <option value="$">$</option>
+                        <option value="$$">$$</option>
+                        <option value="$$$">$$$</option>
+                        <option value="$$$$">$$$$</option>
+                        <option value="$$$$$">$$$$$</option>
                 </select>
                 
                 <div>
